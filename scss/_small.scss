@@ -1,0 +1,321 @@
+/*---------------------------------- BASE STYLES ----------------------------------*/
+
+/* Prevent adjustments of font size after orientation changes */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px; // accounts for sticky nav height
+  height: 100%;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $defaultFont;
+  font-weight: $normalWeight;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+/* Optional layout container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/*---------------------------------- HEADER ----------------------------------*/
+
+#headerWrapper {
+  background-color: #faf5f1;
+  color: $secondaryColor;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem $gutter;
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+  }
+}
+
+/*---------------------------------- NAVIGATION ----------------------------------*/
+
+#navWrapper {
+  background-color: $menuColor;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+
+nav {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 2rem;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+
+    li {
+      flex: initial;
+    }
+
+    li.active {
+      background-color: darken($menuColor, 10%);
+    }
+
+    a {
+      display: block;
+      padding: 0.75rem;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+
+      img {
+        padding: 0.5rem;
+        border-radius: 50%;
+        width: 33px;
+        height: 33px;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+        object-fit: contain;
+      }
+
+      span {
+        display: none;
+      }
+
+      &:hover {
+        background-color: lighten($menuColor, 10%);
+      }
+    }
+  }
+}
+
+/*---------------------------------- TYPOGRAPHY ----------------------------------*/
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  color: #1a1a1a;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-weight: 600;
+  text-align: center;
+  margin: 3rem auto 1.5rem auto;
+  color: #333;
+}
+
+/*---------------------------------- SECTIONS ----------------------------------*/
+section {
+  min-height: 100vh; // instead of height: 100vh
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#about {
+  background-color: $aboutBg;
+}
+#education {
+  background-color: $educationBg;
+}
+#education img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%; // ensures it never stretches beyond its container
+  margin: 2rem auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+#goals {
+  background-color: $goalsBg;
+}
+#stack {
+  background-color: $stackBg;
+}
+#work {
+  background-color: $workBg;
+}
+#contact {
+  background-color: $contactBg;
+}
+
+/*---------------------------------- CARDS ----------------------------------*/
+
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.card {
+  flex: 1 1 250px; // allows flexibility but sets a base width
+  max-width: 300px; // limits how wide they can get
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    max-height: 150px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+  }
+
+  h6 {
+    font-size: 1.2rem;
+    color: $primaryColor;
+  }
+
+  p {
+    margin: 0.5rem 0 0;
+  }
+}
+/*---------------------------------- FORMS ----------------------------------*/
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  gap: 1rem;
+  padding: 1rem;
+
+  input,
+  textarea {
+    padding: 0.5rem;
+    border: 1px solid $greyColor;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+
+  button {
+    background-color: $menuColor;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 5px;
+    font-weight: $normalWeight;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($accentColor, 10%);
+    }
+  }
+}
+.social-block {
+  margin-top: 2rem;
+  text-align: center;
+
+  h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    a {
+      padding: 0.5rem;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      img {
+        width: 28px;
+        height: 28px;
+        display: block;
+      }
+    }
+  }
+}
+
+// Optional small screen tweaks
+@media screen and (max-width: 600px) {
+  .social-icons {
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .social-block h4 {
+    font-size: 1.1rem;
+  }
+}
+
+/*---------------------------------- FOOTER ----------------------------------*/
+
+#footerWrapper {
+  background-color: #e0dbd8;
+}
+
+footer {
+  padding: 0.5rem $gutter;
+
+  p {
+    margin: 0;
+    font-weight: $lightWeight;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  nav ul {
+    justify-content: center;
+    text-align: center;
+  }
+
+  nav li {
+    flex: 0 1 auto;
+  }
+
+  nav a {
+    flex-direction: column;
+    padding: 0.5rem;
+
+    img {
+      margin: 0 auto;
+      padding: 0.5rem;
+    }
+
+    span {
+      display: block;
+      font-size: 0.75rem;
+      margin-top: 0.25rem;
+    }
+  }
+}

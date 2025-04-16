@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Single Page Portfolio</title>
+    <meta name="description" content="Ashton's Sample Start File with SCSS" />
+    <meta name="author" content="Ashton Osazuwa" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/styles.min.css" rel="stylesheet" />
+
+    <!-- Fav Icon Stuff -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+  </head>
+  <body>
+    <div id="headerWrapper"></div>
+    <div id="navWrapper">
+      <nav>
+        <ul>
+          <li class="active">
+            <a href="#about"
+              ><img src="images/address-card-solid.svg" alt="About Me" /><span
+                >About Me</span
+              ></a
+            >
+          </li>
+          <li>
+            <a href="#education"
+              ><img src="images/school-solid.svg" alt="school" /><span
+                >Education</span
+              ></a
+            >
+          </li>
+          <li>
+            <a href="#goals"
+              ><img src="images/piggy-bank-solid.svg" alt="career goals" /><span
+                >Career Goals</span
+              ></a
+            >
+          </li>
+          <li>
+            <a href="#stack"
+              ><img
+                src="images/laptop-code-solid.svg"
+                alt="Technology stack"
+              /><span>Technology Stack</span></a
+            >
+          </li>
+          <li>
+            <a href="#work"
+              ><img src="images/palette-solid.svg" alt="my work" /><span
+                >My Work</span
+              ></a
+            >
+          </li>
+          <li>
+            <a href="#contact"
+              ><img src="images/phone-solid.svg" alt="contact me" /><span
+                >Contact</span
+              ></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- end nav wrapper -->
+
+    <div id="mainWrapper">
+      <main>
+        <section id="about">
+          <h1>Hello!</h1>
+          <p>
+            I’m Ashton, a designer and developer passionate about creating
+            meaningful digital experiences.
+          </p>
+        </section>
+        <section id="education">
+          <h2>Education</h2>
+          <img src="images/graduation.webp" class="hero" />
+
+          <div class="card-row">
+            <div class="card">
+              <h6>Utah Valley University</h6>
+              <p>Currently pursuing an Interaction Design BA.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="goals">
+          <h2>Career Goals</h2>
+          <div class="card-row">
+            <div class="card">
+              <h6>UX Designer</h6>
+              <p>
+                Create intuitive user interfaces with accessibility in mind.
+              </p>
+            </div>
+            <div class="card">
+              <h6>Front-End Developer</h6>
+              <p>Build responsive and modern web experiences.</p>
+            </div>
+            <div class="card">
+              <h6>Design Leader</h6>
+              <p>
+                Lead design projects that prioritize user needs and creativity.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="stack">
+          <h2>Technology Stack</h2>
+          <div class="card-row">
+            <div class="card">
+              <img src="images/html.webp" alt="html" />
+              <h6>HTML & CSS</h6>
+              <p>Strong understanding of semantic markup and styling.</p>
+            </div>
+            <div class="card">
+              <img src="images/css.png" alt="css" />
+              <h6>JavaScript</h6>
+              <p>Experience with ES6+, interactivity, and DOM manipulation.</p>
+            </div>
+            <div class="card">
+              <img src="images/figma.webp" alt="figma" />
+              <h6>Figma</h6>
+              <p>Design and prototype user interfaces and flows.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="work">
+          <h2>My Work</h2>
+          <div class="card-row">
+            <div class="card">
+              <img src="images/voa-2.png" alt="Volunteers of America" />
+              <h6>VOA Utah</h6>
+              <p>Redesign of a nonprofit website.</p>
+            </div>
+            <div class="card">
+              <img src="images/scissors.webp" alt="scissors" />
+              <h6>TrimTime</h6>
+              <p>Mobile app prototype for appointment booking.</p>
+            </div>
+            <div class="card">
+              <img src="images/uvu.webp" alt="UVU" />
+              <h6>Project Three</h6>
+              <p>Redesigning UVU's SOE page.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact">
+          <h2>Contact Me</h2>
+          <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+          </form>
+          <div class="social-block">
+            <h4>Social Platforms</h4>
+            <div class="social-icons">
+              <a
+                href="https://linkedin.com/in/yourusername"
+                target="_blank"
+                aria-label="LinkedIn"
+              >
+                <img src="images/linkedin-brands.svg" alt="LinkedIn icon" />
+              </a>
+              <a
+                href="https://twitter.com/yourusername"
+                target="_blank"
+                aria-label="Twitter"
+              >
+                <img src="images/twitter-brands.svg" alt="Twitter icon" />
+              </a>
+              <a href="mailto:youremail@example.com" aria-label="Email">
+                <img src="images/envelope-solid.svg" alt="Email icon" />
+              </a>
+              <a
+                href="https://youtube.com/@yourchannel"
+                target="_blank"
+                aria-label="YouTube"
+              >
+                <img src="images/youtube-brands.svg" alt="YouTube icon" />
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <!-- end main wrapper -->
+
+    <div id="footerWrapper">
+      <footer>
+        <p>&copy; <span id="year"></span> &bull; Ashton Osazuwa</p>
+      </footer>
+    </div>
+    <!-- end footer wrapper -->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
