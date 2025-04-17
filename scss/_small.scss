@@ -79,7 +79,8 @@ nav {
     }
 
     li.active {
-      background-color: darken($menuColor, 10%);
+      background-color: $primaryColor;
+      border-radius: 10px;
     }
 
     a {

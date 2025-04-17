@@ -376,7 +376,8 @@ nav ul li {
   flex: initial;
 }
 nav ul li.active {
-  background-color: black;
+  background-color: #005f73;
+  border-radius: 10px;
 }
 nav ul a {
   display: block;
